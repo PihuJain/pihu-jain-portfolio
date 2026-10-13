@@ -62,3 +62,39 @@ document.querySelectorAll('.sticker').forEach((sticker) => {
     sticker.style.bottom = 'auto';
   });
 });
+
+// Home-only color bloom that follows a fine pointer with a soft, fluid lag.
+if (document.body.hasAttribute('data-cursor-flow') && window.matchMedia('(hover: hover) and (pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const cursorFlow = document.createElement('div');
+  cursorFlow.className = 'cursor-color-flow';
+  cursorFlow.setAttribute('aria-hidden', 'true');
+  document.body.append(cursorFlow);
+
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  let frame = 0;
+
+  const paint = () => {
+    currentX += (targetX - currentX) * 0.14;
+    currentY += (targetY - currentY) * 0.14;
+    cursorFlow.style.transform = `translate3d(${currentX - 105}px, ${currentY - 105}px, 0)`;
+    if (Math.abs(targetX - currentX) + Math.abs(targetY - currentY) > 0.5) {
+      frame = requestAnimationFrame(paint);
+    } else {
+      frame = 0;
+    }
+  };
+
+  document.addEventListener('pointermove', (event) => {
+    if (event.pointerType === 'touch') return;
+    targetX = event.clientX;
+    targetY = event.clientY;
+    cursorFlow.classList.add('is-visible');
+    if (!frame) frame = requestAnimationFrame(paint);
+  }, { passive: true });
+
+  document.documentElement.addEventListener('pointerleave', () => cursorFlow.classList.remove('is-visible'));
+  window.addEventListener('blur', () => cursorFlow.classList.remove('is-visible'));
+}
