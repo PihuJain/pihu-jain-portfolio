@@ -12,62 +12,22 @@
     <link rel="stylesheet" href="/styles.css" />
     <script src="/script.js" defer></script>
   </head>
-  <body data-cursor-flow>
+  <body class="home-page" data-cursor-flow>
     <div class="site-shell">
       <header class="topbar home-topbar">
         <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
         <nav class="nav home-nav" id="site-nav" aria-label="Portfolio sections">
           <div class="home-nav-group home-nav-left"><span class="home-nav-item" aria-disabled="true">About</span><span class="home-nav-item" aria-disabled="true">Projects</span><span class="home-nav-item" aria-disabled="true">Stickers</span></div>
-          <a class="home-emblem" href="/" aria-label="Pihu Jain, home"><img src="/assets/pihu-avatar.png" alt=""/><span class="sr-only">Pihu Jain home</span></a>
+          <a class="home-emblem" href="/" aria-label="Pihu Jain, home"><img src="/assets/pihu-avatar.png" alt="Pihu Jain cartoon avatar" /></a>
           <div class="home-nav-group home-nav-right"><span class="home-nav-item" aria-disabled="true">Extras</span><span class="home-nav-item" aria-disabled="true">Skills</span><span class="home-nav-item" aria-disabled="true">Contact</span></div>
         </nav>
       </header>
 
-      <main>
-        <section class="hero">
-          <div class="hero-copy">
-            <p class="eyebrow"><span class="status-dot"></span> ENGINEER BY LOGIC · CREATIVE BY NATURE</p>
-            <h1>Hi, I’m <span class="name-highlight">Pihu</span><span class="period">.</span><br />I make ideas <span class="word-art">work<span class="scribble">✳</span></span><span class="and"> & </span><span class="word-art word-play">feel<span class="underline-swish"></span></span></h1>
-            <p class="hero-intro">I’m pursuing a B.Tech in Computer Science, specializing in Cloud Computing and Automation at VIT Bhopal University. I’m curious about technology, love building things, and keep showing up for hackathons and new ideas.</p>
-            <div class="hero-actions"><a class="button button-dark" href="/projects/">Explore my work <span>↗</span></a><a class="text-link" href="/about/">A little about me <span>→</span></a></div>
-            <div class="hero-note"><span class="note-star">✳</span><span>Curious mind. Builder’s hands.<br /><b>Always making something.</b></span></div>
-          </div>
-
-          <div class="hero-art" aria-label="Illustrated placeholder portrait and colorful shapes">
-            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-            <div class="float-card card-code"><span class="tiny-label">CURRENT MODE</span><strong>idea → reality</strong><span class="card-spark">✦</span></div>
-            <div class="float-card card-sticker"><span>☻</span><small>hi, hello!</small></div>
-            <div class="float-card card-palette"><span class="swatch swatch-pink"></span><span class="swatch swatch-orange"></span><span class="swatch swatch-blue"></span><span class="swatch swatch-green"></span><small>color curious</small></div>
-            <div class="portrait-frame">
-              <div class="portrait-halo"></div>
-              <img class="portrait portrait-image" src="/assets/pihu-avatar.png" alt="Pihu’s illustrated cartoon avatar" />
-              <span class="avatar-caption">HI, I’M PIHU ✳</span>
-            </div>
-            <span class="art-doodle doodle-one">✳</span><span class="art-doodle doodle-two">✦</span><span class="art-doodle doodle-three">〰</span>
-          </div>
-          <a class="scroll-cue" href="#selected-work"><span>SCROLL TO EXPLORE</span><i>↓</i></a>
+      <main class="home-canvas">
+        <section class="home-art-slot" aria-label="Illustration of Pihu’s workspace">
+          <div class="home-art-note"><span class="home-art-star" aria-hidden="true">✳</span><p class="eyebrow">THE CANVAS IS YOURS</p><h1>Your illustrated workspace<br /><span>is coming soon.</span></h1><p class="home-art-caption">This space is ready for the desk scene you’re creating.</p></div>
         </section>
-
-        <section class="ticker" aria-label="A little about Pihu"><div class="ticker-track"><span>ENGINEERING WITH EMPATHY</span><b>✳</b><span>MADE WITH CURIOSITY</span><b>✳</b><span>COLOR OUTSIDE THE LINES</span><b>✳</b><span>ENGINEERING WITH EMPATHY</span><b>✳</b><span>MADE WITH CURIOSITY</span><b>✳</b><span>COLOR OUTSIDE THE LINES</span><b>✳</b></div></section>
-
-        <section class="section work-section" id="selected-work">
-          <div class="section-heading"><div><p class="eyebrow">A FEW THINGS I’VE MADE</p><h2>Selected <span class="serif-italic">work</span><span class="heading-spark">✳</span></h2></div><a class="text-link" href="/projects/">See all projects <span>↗</span></a></div>
-          <div class="project-grid">
-            <a class="project-card project-lilac" href="/projects/stegox/"><div class="project-visual visual-dashboard"><div class="window-bar"><i></i><i></i><i></i><span>StegoX · secure media</span></div><div class="dash-body"><div class="dash-side"></div><div class="dash-main"><div class="dash-title"></div><div class="dash-chart"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="dash-row"><i></i><i></i><i></i></div></div></div><span class="visual-tag">PYTHON · STREAMLIT</span></div><div class="project-meta"><div><span class="project-type">HACKATHON · AWARD WINNER</span><h3>StegoX</h3><p>A multi-modal steganography project built with a team at VIT Bhopal.</p></div><span class="project-arrow">↗</span></div></a>
-            <a class="project-card project-lemon" href="/projects/chokehelm/"><div class="project-visual visual-mobile"><div class="phone phone-back"><div></div><i></i><i></i></div><div class="phone phone-front"><span class="phone-top"></span><div class="phone-orb">✦</div><b>Safe control.<br />Better targets.</b><span class="phone-button"></span></div><span class="visual-tag">PYTHON · STREAMLIT</span></div><div class="project-meta"><div><span class="project-type">CONTROL SYSTEMS · SIMULATION</span><h3>ChokeHelm</h3><p>A predictive controller for a naturally flowing oil well.</p></div><span class="project-arrow">↗</span></div></a>
-          </div>
-          <p class="sample-note">Project summaries are drawn from your public GitHub profile; add your personal role and preferred screenshots as you like.</p>
-        </section>
-
-        <section class="about-peek section">
-          <div class="peek-badge">A LITTLE<br />MORE <span>ABOUT</span><b>ME</b></div>
-          <div class="peek-copy"><p class="eyebrow">BEHIND THE BUILDS</p><h2>There’s a person<br />behind the <span class="serif-italic">pixels.</span></h2><p>When I’m not thinking through a problem, I’m usually collecting ideas, exploring color, or finding a new creative thing to try. I like making room for both sides of my brain.</p><a class="button button-outline" href="/about/">Get to know me <span>↗</span></a></div>
-          <div class="peek-decoration"><span class="blob blob-orange"></span><span class="blob blob-blue"></span><span class="blob blob-pink"></span><span class="peek-star">✳</span><span class="peek-word">curious<br />always</span></div>
-        </section>
-
-        <section class="cta-band"><div><p class="eyebrow">HAVE AN IDEA IN MIND?</p><h2>Let’s make something<br /><span class="serif-italic">meaningful.</span></h2></div><a class="button button-light" href="/contact/">Say hello <span>↗</span></a><span class="cta-flower">✳</span></section>
       </main>
-      <footer class="footer"><a class="brand" href="/"><span class="brand-mark">pj<span>✳</span></span><span class="brand-name">PIHU JAIN</span></a><span>Made with curiosity <b>✳</b> © <span data-year>2026</span></span><div class="footer-links"><a href="/resume/">Resume</a><a href="/contact/">Contact</a><a href="/stickers/">Sticker wall</a></div></footer>
     </div>
   </body>
 </html>
