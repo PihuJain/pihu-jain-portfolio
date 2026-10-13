@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="/styles.css" />
     <script src="/script.js" defer></script>
   </head>
-  <body>
+  <body data-cursor-flow>
     <div class="site-shell">
-      <header class="topbar">
-        <a class="brand" href="/" aria-label="Pihu Jain, home"><span class="brand-mark">pj<span>✳</span></span><span class="brand-name">PIHU JAIN</span></a>
+      <header class="topbar home-topbar">
         <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span class="sr-only">Toggle navigation</span></button>
-        <nav class="nav" id="site-nav" aria-label="Main navigation">
-          <a class="nav-link active" href="/">Home</a><a class="nav-link" href="/projects/">Projects</a><a class="nav-link" href="/stickers/">Sticker wall</a><a class="nav-link" href="/about/">About</a><a class="nav-contact" href="/contact/">Let’s talk <span>↗</span></a>
+        <nav class="nav home-nav" id="site-nav" aria-label="Portfolio sections">
+          <div class="home-nav-group home-nav-left"><span class="home-nav-item" aria-disabled="true">About</span><span class="home-nav-item" aria-disabled="true">Projects</span><span class="home-nav-item" aria-disabled="true">Stickers</span></div>
+          <a class="home-emblem" href="/" aria-label="Pihu Jain, home"><img src="/assets/pihu-avatar.png" alt=""/><span class="sr-only">Pihu Jain home</span></a>
+          <div class="home-nav-group home-nav-right"><span class="home-nav-item" aria-disabled="true">Extras</span><span class="home-nav-item" aria-disabled="true">Skills</span><span class="home-nav-item" aria-disabled="true">Contact</span></div>
         </nav>
       </header>
 
@@ -70,3 +71,4 @@
     </div>
   </body>
 </html>
+
