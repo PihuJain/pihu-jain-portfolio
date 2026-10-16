@@ -1,3 +1,14 @@
+// Vercel Web Analytics for this static site (no package or build step required).
+window.va = window.va || function () {
+  (window.vaq = window.vaq || []).push(arguments);
+};
+if (!document.querySelector('script[src="/_vercel/insights/script.js"]')) {
+  const analyticsScript = document.createElement('script');
+  analyticsScript.src = '/_vercel/insights/script.js';
+  analyticsScript.defer = true;
+  document.head.appendChild(analyticsScript);
+}
+
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.nav');
 
